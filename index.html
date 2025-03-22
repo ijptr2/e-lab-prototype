@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriConnect South Sudan</title>
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>AgriConnect South Sudan</h1>
+      <p>A digital platform empowering farmers with resources, funding, and knowledge.</p>
+    </header>
+
+    <!-- Tab Navigation -->
+    <div class="tabs">
+      <button class="tab-button active" onclick="switchTab('home')">Home</button>
+      <button class="tab-button" onclick="switchTab('funding')">Funding</button>
+      <button class="tab-button" onclick="switchTab('knowledge')">Knowledge</button>
+      <button class="tab-button" onclick="switchTab('marketplace')">Marketplace</button>
+    </div>
+
+    <!-- Home Tab -->
+    <div id="home" class="tab-content active">
+      <div class="card">
+        <img src="https://source.unsplash.com/800x600/?farm,field" alt="Farm Field">
+        <h2>Connecting Farmers to Opportunities</h2>
+        <p class="text-gray-700">AgriConnect provides farmers with access to essential tools, training, and financial support.</p>
+        <button class="button">Explore Opportunities</button>
+      </div>
+    </div>
+
+    <!-- Funding Tab -->
+    <div id="funding" class="tab-content">
+      <div class="card">
+        <h2>Funding Agricultural Ventures</h2>
+        <div class="space-y-4">
+          <div class="card">
+            <img src="https://source.unsplash.com/800x600/?tomato,farm" alt="Tomato Farm">
+            <h3>Organic Tomato Farm Expansion</h3>
+            <button class="button">Support This Project</button>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/800x600/?irrigation,farm" alt="Irrigation System">
+            <h3>Irrigation System for Smallholder Farmers</h3>
+            <button class="button">Support This Project</button>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/800x600/?livestock,farm" alt="Livestock">
+            <h3>Livestock Vaccination Initiative</h3>
+            <button class="button">Support This Project</button>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/800x600/?poultry,farm" alt="Poultry Farm">
+            <h3>Women-Led Poultry Farm</h3>
+            <button class="button">Support This Project</button>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/800x600/?agroforestry,farm" alt="Agroforestry">
+            <h3>Agroforestry for Soil Improvement</h3>
+            <button class="button">Support This Project</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Knowledge Tab -->
+    <div id="knowledge" class="tab-content">
+      <div class="card">
+        <img src="https://source.unsplash.com/800x600/?education,farm" alt="Farming Education">
+        <h2>Learn Best Farming Practices</h2>
+        <ul class="list-disc text-gray-700">
+          <li>Basic soil management techniques</li>
+          <li>Efficient irrigation methods</li>
+          <li>Market trends and pricing strategies</li>
+        </ul>
+        <button class="button">Explore Curriculum</button>
+      </div>
+    </div>
+
+    <!-- Marketplace Tab -->
+    <div id="marketplace" class="tab-content">
+      <div class="card">
+        <h2>Affordable Farming Inputs</h2>
+        <div class="grid-cols-2">
+          <div class="card">
+            <img src="https://source.unsplash.com/800x600/?seeds,farm" alt="Hybrid Maize Seeds">
+            <h3>Hybrid Maize Seeds</h3>
+            <button class="button">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/800x600/?water,pump" alt="Manual Water Pump">
+            <h3>Manual Water Pump</h3>
+            <button class="button">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/800x600/?irrigation,kit" alt="Drip Irrigation Kit">
+            <h3>Drip Irrigation Kit</h3>
+            <button class="button">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/800x600/?fertilizer,farm" alt="Organic Fertilizer">
+            <h3>Organic Fertilizer Pack</h3>
+            <button class="button">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 AgriConnect South Sudan. All rights reserved. | <a href="#">Privacy Policy</a></p>
+  </footer>
+
+  <script>
+    // JavaScript to handle tab switching
+    function switchTab(tabName) {
+      // Hide all tab content
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+      });
+
+      // Show the selected tab content
+      document.getElementById(tabName).classList.add('active');
+
+      // Update active tab button
+      document.querySelectorAll('.tab-button').forEach(button => {
+        button.classList.remove('active');
+      });
+      document.querySelector(`[onclick="switchTab('${tabName}')"]`).classList.add('active');
+    }
+  </script>
+</body>
+</html>
